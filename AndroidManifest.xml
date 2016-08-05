@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.minisea.cookbook"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="4" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+<!-- 使用网络功能所需权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.GET_TASKS"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	
+    <application
+        android:name="com.dream.myqiyi.BaseApp"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.dream.myqiyi.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dream.myqiyi.com.dream.myqiyiaccount.AccountActivity" />
+        <activity android:name="com.dream.myqiyi.channel.ChannelActivity" />
+        <activity android:name="com.dream.myqiyi.search.SearchActivity" />
+        <activity android:name="com.dream.myqiyi.home.HomeActivity" />
+        <activity android:name="com.dream.myqiyi.more.MoreActivity" />
+          <activity
+            android:name="com.iflytek.voiceads.request.IFLYBrowser"
+            android:screenOrientation="portrait" />
+        <service 
+            android:name="com.iflytek.voiceads.update.DownloadService"/>
+        
+        <meta-data  android:name="IFLYTEK_APPKEY_AD" android:value="55c03cd4"/>
+    </application>
+
+</manifest>
